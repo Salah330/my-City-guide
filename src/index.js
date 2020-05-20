@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import InfoProvider from "./Components/Context";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
+import { InfoProvider } from "./Components/Context";
 ReactDOM.render(
   <InfoProvider>
     <Router>

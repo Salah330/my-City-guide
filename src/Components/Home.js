@@ -1,10 +1,20 @@
 import React, { Component } from "react";
-
+import { InfoConsumer } from "./Context";
+import Info from "./Info";
+import { InputGroup } from "reactstrap";
 export default class Home extends Component {
   render() {
     return (
-      <div>
-        <h2>home page</h2>
+      <div className="container mt-5">
+        <div className="row mb-5">
+          <InfoConsumer>
+            {(data) => {
+              return data.info.map((item) => {
+                return <Info key={item.id} item={item} />;
+              });
+            }}
+          </InfoConsumer>
+        </div>
       </div>
     );
   }

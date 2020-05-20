@@ -52,3 +52,29 @@
     </form>
   </div>
 </nav>;
+{
+  /* start nav */
+}
+<Nav variant="tabs" className="nav nav-tabs" defaultActiveKey="#aboutPlace">
+  {/* about place tab */}
+  <NavItem>
+    <NavLink href="#aboutPlace" role="tab" data-toggle="tab">
+      About Place
+    </NavLink>
+  </NavItem>
+  {/* review tab */}
+  <NavItem>
+    <NavLink href="#review" role="tab" data-toggle="tab">
+      Review
+    </NavLink>
+  </NavItem>
+  {/* map tab */}
+  <NavItem>
+    <NavLink href="#map" role="tab" data-toggle="tab">
+      Map
+    </NavLink>
+  </NavItem>
+</Nav>;
+{
+  /* end navs */
+}
