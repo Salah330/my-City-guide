@@ -31,27 +31,21 @@ const Example = (props) => {
         </NavbarBrand>
         <NavbarToggler className="bg-white" onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="m-auto" navbar>
+          <Nav className="mx-auto" navbar>
             <NavItem>
-              <NavLink
-                className="text-white text-uppercase ml-5"
-                href="/components/"
-              >
+              <NavLink className="text-white text-uppercase ml-5" href="/">
                 Home &nbsp; <i className="fas fa-home"></i>
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                className="text-white text-uppercase ml-5"
-                href="https://github.com/reactstrap/reactstrap"
-              >
+              <NavLink className="text-white text-uppercase ml-5" href="/news">
                 news
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 className="text-white text-uppercase ml-5"
-                href="https://github.com/reactstrap/reactstrap"
+                href="/contact"
               >
                 contact us
               </NavLink>
