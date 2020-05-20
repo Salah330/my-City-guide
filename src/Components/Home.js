@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { InfoConsumer } from "./Context";
 import Info from "./Info";
-import { InputGroup } from "reactstrap";
 export default class Home extends Component {
   render() {
     return (

@@ -9,6 +9,17 @@ class InfoProvider extends Component {
     detailInfo: detailInfo,
     news: news,
   };
+  getItem = (id) => {
+    const itemm = this.state.info.find((item) => item.id === id);
+    return itemm;
+  };
+  setdetails = (id) => {
+    const itemm = this.getItem(id);
+    this.setState(() => {
+      return { detailInfo: itemm };
+    });
+  };
+
   render() {
     return (
       <InfoContext.Provider
@@ -17,6 +28,8 @@ class InfoProvider extends Component {
           reviews: this.state.reviews,
           detailInfo: this.state.detailInfo,
           news: this.state.news,
+          getItem: this.getItem,
+          setdetails: this.setdetails,
         }}
       >
         {this.props.children}

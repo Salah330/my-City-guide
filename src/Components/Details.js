@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { InfoConsumer } from "./Context";
+import ReviewCard from "./ReviewCard";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import { Tabs, Tab } from "react-bootstrap-tabs";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -65,11 +66,13 @@ export default class Details extends Component {
                 >
                   <h1 className="mb-3">{title}</h1>
                   <p>{description}</p>
-                  <img
-                    src={img}
-                    alt={title}
-                    className="img-thumbnail img-fluid "
-                  />
+                  <div className="container-fluid w-100">
+                    <img
+                      src={img}
+                      alt={title}
+                      className="img-thumbnail img-fluid w-100"
+                    />
+                  </div>
                 </Tab>
                 <Tab
                   label="Review"
@@ -77,7 +80,7 @@ export default class Details extends Component {
                   title="review"
                   className="mt-2"
                 >
-                  reviews content
+                  <ReviewCard />
                 </Tab>
                 <Tab label="Map" eventKey="map" title="review" className="mt-2">
                   <iframe

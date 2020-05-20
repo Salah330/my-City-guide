@@ -9,7 +9,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-
+import { Link } from "react-router-dom";
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,22 +33,19 @@ const Example = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem>
-              <NavLink className="text-white text-uppercase ml-5" href="/">
+              <Link className="text-white text-uppercase ml-5" to="/">
                 Home &nbsp; <i className="fas fa-home"></i>
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink className="text-white text-uppercase ml-5" href="/news">
+              <Link className="text-white text-uppercase ml-5" to="/news">
                 news
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink
-                className="text-white text-uppercase ml-5"
-                href="/contact"
-              >
+              <Link className="text-white text-uppercase ml-5" to="/contact">
                 contact us
-              </NavLink>
+              </Link>
             </NavItem>
           </Nav>
           <form className="form-inline my-2 my-lg-0">
